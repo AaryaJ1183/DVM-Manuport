@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    /* color:#00112E; */
+}
+
+body
+{
+    overflow-x: hidden;
+    background-color: #F6FAFF;
+}
+
+
+/* NAVBAR ----------------------------------------------------------------------------*/
+.nav
+{
+    height:80px;
+    width:100vw;
+    background-color: white;
+    /* position: fixed;
+    top:0;
+    left:0;
+    margin-top:40px; */
+    z-index:1000;
+    display: flex;
+    align-items: center;
+}
+.navLogoContainer
+{
+    position: relative;
+    height:35px;
+    left:5vw;
+}
+.navLogoText
+{
+    color:#9FAEB5;
+    /* font-size: 2px; */
+}
+.navLogoImg
+{
+    color: #00358D;
+}
+
+.hamburger
+{
+    position: absolute;
+    font-size: 30px;
+    right:0;
+    width:10%;
+    /* width:120%; */
+}
+
+
+/* section1------------------------------------------------------------------ */
+#section1
+{
+    position: relative;
+    /* border:2px solid red; */
+    height:150vh;
+}
+
+.video1
+{
+    width:95vw;
+    height: 80vh;
+    object-fit: cover;
+    border-top-right-radius: 100px;
+}
+
+/* .section1text [id="1"]
+{
+    font-family: "Exo 2", sans-serif;
+    font-size: 4.5rem;
+    font-weight: 650;
+    letter-spacing: -0.05rem;
+    word-break: normal;
+} */
+
+.blueText
+{
+    font-family: "Exo 2", sans-serif;
+    font-size: 6rem;
+    font-weight: 650;
+    color:#00358D;
+}
+.whiteText
+{
+    /* display: block; */
+    font-family: "Exo 2", sans-serif;
+    font-size: 6rem;
+    font-weight: 650;
+    font-style: italic;
+    -webkit-text-fill-color: aliceblue;
+    -webkit-text-stroke-width: 1.5px;
+    margin-left: 1rem;
+}
+.section1text [id="1B"]
+{
+    display: block;
+}
+
+
+
+/* ----------------------------------------------------------------------------- */
+
+#section2
+{
+    background-color: #00358D;
+    color:white;
+    font-family: sans-serif;
+    border-top-left-radius: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section2_header
+{
+    font-size: 3rem;
+    font-weight: 400;
+    position: relative;
+    padding: 4rem 2rem 2rem 2rem;
+}
+
+.section2_container
+{
+    width:90vw;
+    height:25vh;
+    /* border:4px solid red; */
+}
+
+#section2_img
+{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+    border-radius: 2rem;
+}
+
+.section2_divider
+{
+    height:3px;
+    width:90vw;
+    background-color: #335DA3;
+    margin-top: 2rem;
+}
+.section2_li
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin:2rem 2rem;
+    line-height: 1.75rem;
+}
+.section2_paraHeader
+{
+    font-size: 1.5rem;
+}
+
+
+/* ----------------------------------------------------------------------------- */
+#section3
+{   
+    margin-top: 10rem;
+    font-family: sans-serif;
+    position: relative;
+}
+
+.section3_header
+{
+    font-size: 1.2rem;
+    position: absolute;
+    top:-0.750rem;
+    padding-left: 2.5rem;
+    background-color: #F6FAFF;
+    /* background-color: red; */
+    width:15rem;
+    color:#062c69;
+
+}
+.section3_container
+{
+    /* border1px solid black; */
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-top-right-radius: 5rem;
+    height:100vh;
+    width:85vw;
+}
+.section3_text
+{
+    font-size: 2rem;
+    line-height: 3rem;
+    margin: 5rem 5rem 0 3rem;
+}
+.section3_button
+{
+    border-radius: 5rem;
+    border:1px solid #335DA3;
+    background-color: #F6FAFF;
+    font-size: 1.2rem;
+
+    display: flex;
+    padding:0.75rem 1.75rem;
+    align-items: center;
+    margin: 1rem 0 0 2.5rem;
+}
+.section3_buttonCircle
+{
+    background-color: #062c69;
+    border-radius: 50%;
+    color: white;
+    
+    /* height:100%; */
+    /* width:100%; */
+    padding:0.5rem 0.65rem;
+    margin-left: 1rem;
+}
