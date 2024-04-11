@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="style.css"> -->
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="media.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -22,14 +22,14 @@
             
     </div>
 
-    <div class="section" id="section1">
+    <section id="heroSection">
 
             <div class="videoContainer">
                 <video class="video1" autoplay loop src="https://a.storyblok.com/f/240783/x/1b03c229b0/peoplev4_compressed.mp4"  ></video>
             </div>
         
-            <div class="section1text">
-                <span class="blueText" id="1A">Freight 
+            <div class="heroSectionText">
+                <span class="blueText" id="1A">Freight
                 <span class="blueText" id="1B">forwarding.
                 </span>
                 </span>
@@ -40,9 +40,9 @@
                 </div>
             </div>
         
-    </div>
+    </section>
 
-    <div class="section" id="section2">
+    <section id="section2">
         <h1 class="section2_header">We're Different Because</h1>
 
         <div class="section2_container">    
@@ -86,12 +86,12 @@
 
 
         </div>
-    </div>
+    </section>
 
 
-    <div class="section" id="section3">
+    <section id="section3">
         <div class="section3_header">OUR LOCATIONS</div>
-        <div class="section3_container">
+        <section class="section3_container">
             <p class="section3_text">
                 Around the world, our teams are dedicated to meeting your logistics needs. 
                 As part of the 
@@ -101,28 +101,43 @@
                     , we can leverage group assets to support our solutions and add financial stability and flexibility, which is all to your benefit. Spin the globe and find your location.
             </p>
 
-            <button class="section3_button">
+            <button class="section3_button paraButton">
                 <p class="section3_buttonText">All Locations</p>
                 <div class="section3_buttonCircle">
                     <i class="fa-solid fa-arrow-right"></i>
                 </div>
             </button>
-
-    </div>
+        </section>
+    </section>
     
-    <div class="section" id="section4">
-            <div class="container" id="container1">
-
-            </div>
-    </div>
+    <section id="countryAnimationSection">
+            <container id="container1"></container>
+            <container id="container2"></container>
+            <container id="container3"></container>
+            <container id="container4"></container>
+    </section>
         
 
         
 
     </div>
 
+    <section id="howWeMoveSection">
+        <div>
+            <h2 class="howWeMove_header">How we Move</h2>
+            <p class="howWeMove_description">Manuport Logistics offers a different approach to shipping, guided by creative thinking. Ship, barge, plane, train, truck, or a combination. For you, we move mountains.</p>
+            
+            <button class="howWeMove_button paraButton"></button>
+        </div>
+        
+        <div class="howWeMove_container">
+            
+        </div>
+
+    </section>
 
 
+    <!-- Q: defer or not? -->
     <script src="script.js"></script>
 </body>
 </html>

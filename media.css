@@ -61,7 +61,7 @@
         font-size: 7rem;
         /* margin-left: 2rem; */
     }
-    #section1
+    #heroSection
     {
         height:170vh;
     }
@@ -70,10 +70,7 @@
 /* -------------------------------------------------------------------------------------------- */
 
 @media all and (900px<width)
-{   .blueText
-    {
-        /* mix-blend-mode:overlay; */
-    }
+{   
     .videoContainer
     {
         display: flex;
@@ -89,7 +86,7 @@
         height:130vh;
     }
   
-    .section1text
+    .heroSectionText
     {
         position: relative;
         top:5rem;
@@ -97,7 +94,7 @@
       
         
     }
-    #section1
+    #heroSection
     {
         height:130vh;
     }
