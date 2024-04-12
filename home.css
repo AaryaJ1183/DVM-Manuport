@@ -264,6 +264,8 @@ body
     width:60px;
 }
 
+
+
 /* --------------------------------------------------------------------------------- */
 /* How we Move Section */
 
@@ -280,32 +282,27 @@ body
 
     position: relative;
 }
-
+.howWeMove_about
+{
+    position: relative;
+    top:15rem;
+    left:10vw;
+}
 .howWeMove_header
 {
     font-size: 3.5rem;
     font-weight: 400;
-
-    position: relative;
-    top:15rem;
-    left:10vw;
 }
 .howWeMove_description
 {
-    background-color: red;
+    /* background-color: red; */
     font-size: 1.4rem;
     width:30rem;
     margin: 2rem 0;
     line-height: 2rem;
-    position: relative;
-    top:15rem;
-    left:10vw;
-
 }
 .howWeMove_button
 {
-    position: relative;
-    top:15rem;
     left:7vw;
 }
 
@@ -318,6 +315,24 @@ body
     
     position: absolute;
     top:15rem;
-    right:5vw;
+    right:10vw;
 }
 
+#howWeMove_img
+{
+    height:120%;
+    z-index:1;
+
+    position: relative;
+    right:4rem;
+    /* animation: howWeMoveAnimation 0.75s linear infinite; */
+}
+
+/* @keyframes howWeMoveAnimation {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+} */

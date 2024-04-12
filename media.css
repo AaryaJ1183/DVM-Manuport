@@ -68,6 +68,35 @@
 }
 
 /* -------------------------------------------------------------------------------------------- */
+@media all and (width<900px)
+{
+    .howWeMoveSection
+    {
+        /* flex-direction: column; */
+        position: relative;
+    }
+    .howWeMove_about
+    {
+        left:5vw;
+        top:85vw;
+        /* min-height: 80%; */
+        width: 80vw;
+        /* background-color: red; */
+    }
+    .howWeMove_header
+    {
+        font-size: 10vw;
+    }
+    .howWeMove_container
+    {
+        height:90vw;
+        width:90vw;
+        left:5vw;
+        top:0;
+        
+    }
+}
+/* -------------------------------------------------------------------------------------------- */
 
 @media all and (900px<width)
 {   
@@ -91,8 +120,6 @@
         position: relative;
         top:5rem;
         left:2rem;
-      
-        
     }
     #heroSection
     {
@@ -103,3 +130,16 @@
 
 
 /* -------------------------------------------------------------------------------------------- */
+@media all and (900px<width<1300px)
+{
+    .howWeMove_about
+    {
+        left:5vw;
+    }
+    .howWeMove_container
+    {
+        right:6vw;
+        height:30vw;
+        width:30vw;
+    }
+}

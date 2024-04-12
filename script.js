@@ -9,7 +9,8 @@ function changeImg(sauce)
 }
 
 
-// SCROLL ANIMATION
+//-----------SCROLL ANIMATION-------------------
+
 let countryArr1 = ['Spain', 'Turkey', 'United Kingdom','Portugal', 'Greece','Belgium', 'France','Germany'];
 let pfpArr1 = ['https://a.storyblok.com/f/240783/1600x1200/813a4cacde/image002.jpeg/m/256x0/filters:quality(95):focal(undefined)'
     , 'https://a.storyblok.com/f/240783/780x1170/2542e511a6/5903cd6065184eca94ec346367d6201c-f5fb7444.jpg/m/256x0/filters:quality(95):focal(undefined)'
@@ -205,7 +206,8 @@ animateCountries('#container3', countryArr3, pfpArr3,animationSpeed);
 animateCountries('#container4', countryArr4, pfpArr4,-animationSpeed);
 
 
-function animateCountries(containerID, countryArrX, pfpArrX,Z) {
+function animateCountries(containerID, countryArrX, pfpArrX,Z)
+{
     let container = document.querySelector(containerID);
     let countryDiv = document.createElement('div');
 
@@ -262,5 +264,38 @@ for(j=0;j<multiplicity;j++)
 
 }
 
-
 }
+
+
+
+// ----------------How we Move Section-------------------
+let howWeMoveImg = document.getElementById("howWeMove_img");
+
+let howWeMoveImgArr = ['./resources/Cargo/Cargo-Plane-Business.webp'
+                    , './resources/Cargo/Cargo-Barging-Business.webp'
+                    , './resources/Cargo/Cargo-Ship-Business.webp'
+                    , './resources/Cargo/Cargo-Truck-Business.webp'
+                    , './resources/Cargo/Cargo-Rail-Business.webp'
+                    ];
+
+
+
+
+let i=0;
+
+function changeImgWeMove(ele,eleArr)
+{      
+   
+    if(i>=eleArr.length)
+    {
+        i=0;
+    }
+    ele.src = eleArr[i];    
+    i++;
+    
+    console.log("changeImgWeMove working!")
+    // setTimeout(changeImgWeMove(),3);
+    setTimeout(()=>changeImgWeMove(ele, eleArr), 3000);
+}
+
+changeImgWeMove(howWeMoveImg,howWeMoveImgArr);
