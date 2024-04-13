@@ -211,11 +211,10 @@ function animateCountries(containerID, countryArrX, pfpArrX,Z)
     let container = document.querySelector(containerID);
     let countryDiv = document.createElement('div');
 
-    const multiplicity = 4;
+    const multiplicity = 4; //Repeating one countryDiv to fill the width (n more)
     
 for(j=0;j<multiplicity;j++)
 {
-
 
     for (let i = 0; i < countryArrX.length; i++) {
         let countryImg = document.createElement('img');
@@ -226,23 +225,34 @@ for(j=0;j<multiplicity;j++)
         countryText.textContent = countryName; 
         countryImg.src = pfpArrX[i];
 
-        Object.assign(countryText.style, {
-            fontSize: '40px',
-            fontFamily:'sans-serif',
-            fontWeight: '400',
-            color: 'black',
-            margin: '0 6rem 0 1rem',
-            whiteSpace: 'nowrap',
-        });
+        // Object.assign(countryText.style, {
+        //     fontSize: '40px',
+        //     fontFamily:'sans-serif',
+        //     fontWeight: '400',
+        //     color: 'black',
+        //     margin: '0 6rem 0 1rem',
+        //     whiteSpace: 'nowrap',
+        // });
+        countryText.classList.add('countryTextClass');
 
         countryImg.style.height = '60px';
         countryImg.style.width = '60px';
         countryImg.style.objectFit='cover';
         countryImg.style.borderRadius = '1.2rem';
 
+        // countryImg.classList.add('countryImgClass');
+        // countryImg.addEventListener("mouseover",()=>{
+        //     countryImg.src='./resources/Logo.png';
+        // });
+        // countryImg.addEventListener("mouseout",()=>{
+        //     countryImg.src=pfpArrX[i];
+        // });
+        
+
         countryDiv.style.display = "flex";
         countryDiv.style.alignItems = "center";
         countryDiv.style.margin = '25px 0';
+
 
         container.style.display = "flex";
 
@@ -255,10 +265,11 @@ for(j=0;j<multiplicity;j++)
         let scrollPosition = window.scrollY;
         let movementAmt = (scrollPosition) / Z;
 
-        let initialTime = new Date();
-        console.log("Time now: " + initialTime);
+        // let initialTime = new Date();
+        // console.log("Time now: " + initialTime);
 
         countryDiv.style.transform = `translateX(${movementAmt}px)`;
+        // countryDiv.classList.add('countryDivSmooth');
     });
     
 

@@ -126,6 +126,39 @@
         height:130vh;
     }
 
+    .section2_header
+    {
+        position: relative;
+        font-size: 5rem;
+    }
+    .wereDifferentHeadingText
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 5vw;
+    }
+    #section2
+    {
+        flex-direction: row;
+    }
+    .section2_container
+    {
+        width:25vw;
+        /* margin-left: 5vw; */
+    }
+    .section2_li
+    {
+        width:50vw;
+    position: relative;
+    left:-5vw;
+    }
+    .section2_divider
+    {
+        position: relative;
+        left:20vw;
+    }
+
 }
 
 

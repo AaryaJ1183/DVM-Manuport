@@ -126,7 +126,7 @@ body
     font-size: 3rem;
     font-weight: 400;
     position: relative;
-    padding: 4rem 2rem 2rem 2rem;
+    padding: 4rem 2rem 2rem 0rem;
 }
 
 .section2_container
@@ -159,6 +159,7 @@ body
 
     margin:2rem 2rem;
     line-height: 1.75rem;
+    
 }
 .section2_paraHeader
 {
@@ -263,8 +264,51 @@ body
     height: 60px;
     width:60px;
 }
+.countryyyText {
+    transition: color 0.3s ease; 
+}
+
+.countryyyText:hover {
+    color: red; 
+}
+
+.countryTextClass
+{
+    font-size: 40px;
+    font-family:sans-serif;
+    font-weight: 600;
+    color: black;
+    margin: 0 6rem 0 1rem;
+    white-space: nowrap;
+    transition: all 0.25s ease-in-out;
+}
+.countryTextClass:hover
+{
+    /* color:red; */
+    -webkit-text-fill-color: aliceblue;
+    -webkit-text-stroke-width: 1.5px;
+}
+
+.countryImgClass
+{
+    height:60px;
+    width:60px;
+    object-fit: cover;
+    border-radius: 1.2rem;
+    transition: all 0.25s ease-in-out;
+}
+
+.countryImgClass:hover
+{
+    background-image: url(./resources/Logo.png);
+}
 
 
+/* .countryDivSmooth
+{
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier( 0.51, 0.01, 0.36, 0.99 );
+} */
 
 /* --------------------------------------------------------------------------------- */
 /* How we Move Section */
@@ -336,3 +380,48 @@ body
         opacity: 1;
     }
 } */
+
+
+/* ------------------------------------------------------------ */
+
+.joinTeamSection
+{
+    background-color: red;
+    position: relative;
+    top:20rem;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+}
+.joinTeam_cards
+{
+    position: relative;
+}
+.joinTeam_cardImg
+{
+    min-height:30rem;
+    width:90vw;
+    background-color: aqua;
+    display: flex;
+
+    position: relative;
+}
+.cardImg
+{
+    height:40%;
+    width:100%;
+    object-fit: cover;
+    
+    position: absolute;
+}
+.joinTeam_content
+{
+    position: absolute;
+    left:18%;
+    top:0;
+    width: 60%;
+
+    background-color: #9FAEB5;
+    word-break: break-word;
+}
