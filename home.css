@@ -85,15 +85,17 @@ body
 .blueText
 {
     font-family: "Exo 2", sans-serif;
-    font-size: 6rem;
+    font-size: 8rem;
     font-weight: 650;
-    color:#00358D;
+    color:black;
+    margin-left: 4rem;
+
 }
 .whiteText
 {
     /* display: block; */
     font-family: "Exo 2", sans-serif;
-    font-size: 6rem;
+    font-size: 8rem;
     font-weight: 650;
     font-style: italic;
     -webkit-text-fill-color: aliceblue;
@@ -151,12 +153,19 @@ body
     background-color: #335DA3;
     margin-top: 2rem;
 }
+.section2_loader
+{
+    /* position: relative; */
+    background-color: red;
+    bottom:2.2rem;
+}
 .section2_li
 {
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    justify-content: center;
+   
     margin:2rem 2rem;
     line-height: 1.75rem;
     
@@ -165,7 +174,6 @@ body
 {
     font-size: 1.5rem;
 }
-
 
 /* ----------------------------------------------------------------------------- */
 #section3
@@ -386,7 +394,7 @@ body
 
 .joinTeamSection
 {
-    background-color: red;
+    /* background-color: red; */
     position: relative;
     top:20rem;
     display: flex;
@@ -394,15 +402,25 @@ body
     align-items: center;
     flex-direction: column;
 }
+
 .joinTeam_cards
 {
     position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    /* transform: 
+            perspective(1000px)
+            rotateX('45deg')
+            rotateY('45deg');
+    transform-style: preserve-3d; */ 
+
 }
+
 .joinTeam_cardImg
 {
     min-height:30rem;
     width:90vw;
-    background-color: aqua;
+    /* background-color: aqua; */
     display: flex;
 
     position: relative;
@@ -422,6 +440,60 @@ body
     top:0;
     width: 60%;
 
-    background-color: #9FAEB5;
+    /* background-color: #9FAEB5; */
     word-break: break-word;
+}
+
+
+
+
+
+/* ------------------------------------------- */
+.card-container
+{
+    perspective: 1500px;
+    min-height:30rem;
+    width:90vw;
+}
+.card
+{
+    height:100%;
+    width:100%;
+    transform-style: preserve-3d;
+    transition: all 0.05s linear;
+    padding-bottom: 1rem;
+    box-shadow: 0 2rem 4rem 2rem #00060f25;
+}
+.card-img-div
+{
+    width:90vw;
+    height:15rem;
+}
+.card-img
+{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+}
+
+.card-description
+{
+    color:#062c69;
+    font-size:1.2rem;
+    font-family: sans-serif;
+    margin: 2rem;
+    line-height: 1.75rem;
+}
+
+.joinTeam_text
+{
+    width:90vw;
+    font-size:2rem;
+    font-family: sans-serif;
+    margin-bottom: 5rem;
+}
+.joinTeam_text h3
+{
+    font-size: 1rem;
+    font-weight: 400;
 }

@@ -74,14 +74,13 @@
     {
         /* flex-direction: column; */
         position: relative;
+        background-color: #98a1a5;
     }
     .howWeMove_about
     {
         left:5vw;
         top:85vw;
-        /* min-height: 80%; */
         width: 80vw;
-        /* background-color: red; */
     }
     .howWeMove_header
     {
@@ -94,6 +93,44 @@
         left:5vw;
         top:0;
         
+    }
+
+    .joinTeam_text
+    {
+        font-family: sans-serif;
+        position: relative;
+        
+        margin-left: 10vw;
+        width:100%;
+    }
+    .joinTeam_text h3
+    {
+        font-size: 1rem;
+    }
+    .joinTeam_text header 
+    {
+        font-size: 2rem;
+    }
+    .joinTeam_cards
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90vw;
+        background-color: red;
+        height:fit-content;
+    }
+    .joinTeam_content
+    {
+        position: relative;
+        top:-18rem;
+        left:0;
+        font-size: 1rem;
+        width:100%;
+        /* min-height:20rem; */
+
+        background-color:rgb(215, 199, 199);
+
     }
 }
 /* -------------------------------------------------------------------------------------------- */
@@ -156,7 +193,8 @@
     .section2_divider
     {
         position: relative;
-        left:20vw;
+        width:50vw;
+        /* left:-10vw; */
     }
 
 }

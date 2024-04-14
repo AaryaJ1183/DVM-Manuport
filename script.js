@@ -310,3 +310,35 @@ function changeImgWeMove(ele,eleArr)
 }
 
 changeImgWeMove(howWeMoveImg,howWeMoveImgArr);
+
+
+
+// -------------------------------------------
+// 3D TILT EFFECT
+const card = document.getElementById('card');
+const cardRect = card.getBoundingClientRect();
+
+    
+card.addEventListener('mousemove', function(e) {
+    const centerX = cardRect.left + cardRect.width / 2;
+    const centerY = cardRect.top + cardRect.height / 2;
+    const deltaX = e.clientX - centerX;
+    const deltaY = centerY - e.clientY;
+    const tiltX = (deltaY / centerY) * 15;
+    const tiltY = (deltaX / centerX) * 15;
+    card.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+});
+
+card.addEventListener('mouseleave', function() {
+    card.style.transform = 'rotateX(0deg) rotateY(0deg)';
+    
+});
+
+
+// function add3d(ele)
+// {
+
+
+// }
+
+// add3d(card);
