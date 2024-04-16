@@ -8,7 +8,8 @@ function changeImg(sauce)
     section2img.style.transitionDuration='1s';
 }
 
-
+ // TO BE SAVED ONLY IN THE NAUKAR-BRANCH
+ 
 //-----------SCROLL ANIMATION-------------------
 
 let countryArr1 = ['Spain', 'Turkey', 'United Kingdom','Portugal', 'Greece','Belgium', 'France','Germany'];
@@ -331,6 +332,8 @@ card.addEventListener('mousemove', function(e) {
 
 card.addEventListener('mouseleave', function() {
     card.style.transform = 'rotateX(0deg) rotateY(0deg)';
+
+   
     
 });
 
