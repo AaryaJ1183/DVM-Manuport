@@ -324,7 +324,7 @@ card.addEventListener('mousemove', function(e) {
     const centerY = cardRect.top + cardRect.height / 2;
     const deltaX = e.clientX - centerX;
     const deltaY = centerY - e.clientY;
-    const tiltX = (deltaY / centerY) * 15;
+    const tiltX = (deltaY / centerY) * 35;
     const tiltY = (deltaX / centerX) * 15;
     card.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
 });

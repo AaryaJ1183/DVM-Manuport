@@ -36,15 +36,12 @@ body
     position: relative;
     height:35px;
     left:5vw;
+    color: #00358D;
 }
 .navLogoText
 {
     color:#9FAEB5;
     /* font-size: 2px; */
-}
-.navLogoImg
-{
-    color: #00358D;
 }
 
 .hamburger
