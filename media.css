@@ -1,3 +1,71 @@
+@media all and (550px<width<900px)
+{
+    .commoditiesAndServicesSection
+    {
+        top:140vw;
+        /* display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; */
+        display: grid;
+        place-items:center;
+        background-color: red;
+    }
+    .cnsCard
+    {
+        margin:2rem;
+        width:80vw;
+        height:15rem;
+        /* padding:2rem; */
+        /* background-color: red; */
+    }
+    .cnsHeader
+    {
+        font-size: 2vw;   
+    }
+    .cnsText
+    {
+        font-size: 3.5vw;
+    }
+    .cnsButton
+    {
+        padding: 1.75vw 2.5vw;
+        font-size: 2.25vw;
+    }
+}
+@media all and (width<550px)
+{
+    .commoditiesAndServicesSection
+    {
+        top:140vw;
+        /* display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; */
+        display: grid;
+        place-items:center;
+        background-color: red;
+    }
+    .cnsCard
+    {
+        margin:1rem;
+        width:80vw;
+        height:12rem;
+    }
+    .cnsHeader
+    {
+        font-size: 3vw;   
+    }
+    .cnsText
+    {
+        font-size: 4.5vw;
+    }
+    .cnsButton
+    {
+        padding: 2vw 4.5vw;
+        font-size: 2.25vw;
+    }
+}
 @media all and (width<767px)
 {
     .blueText
@@ -74,7 +142,7 @@
 /* -------------------------------------------------------------------------------------------- */
 @media all and (width<900px)
 {
-    /* .howWeMoveSection
+    .howWeMoveSection
     {
         flex-direction: column;
         position: relative;
@@ -83,7 +151,7 @@
     .howWeMove_about
     {
         left:5vw;
-        top:85vw;
+        top:105vw;
         width: 80vw;
     }
     .howWeMove_header
@@ -96,8 +164,7 @@
         width:90vw;
         left:5vw;
         top:0;
-        
-    } */
+    }
 
     .joinTeam_text
     {
@@ -148,6 +215,8 @@
         position: relative;
         top:120vw;
     }
+    /* ------------------------------------------------ */
+   
 }
 /* -------------------------------------------------------------------------------------------- */
 
@@ -224,7 +293,7 @@
 /* -------------------------------------------------------------------------------------------- */
 @media all and (900px<width<1300px)
 {
-    /* .howWeMove_about
+    .howWeMove_about
     {
         left:5vw;
     }
@@ -233,5 +302,5 @@
         right:6vw;
         height:30vw;
         width:30vw;
-    } */
+    }
 }

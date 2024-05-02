@@ -14,6 +14,8 @@ body
 {
     /* overflow-x: hidden; */
     background-color: #F6FAFF;
+    position: relative;
+    left:1.5vw;
 }
 
 /* LOADER-SCREEN------------------------------------------------------------------------------ */
@@ -75,6 +77,11 @@ body
 .goldmode-div:hover
 {
     background-color: goldenrod;
+}
+.goldmode-div:active
+{
+    scale: 0.8;
+    /* background-color: red; */
 }
 
 
@@ -490,6 +497,24 @@ body
     padding:0.5rem 0.65rem;
     margin-left: 1rem;
 }
+.fa-arrow-right
+{
+    /* transition: all 0.5s ease; */
+    color:#F6FAFF
+}
+.section3_buttonCircle:hover .fa-arrow-right
+{
+    /* color:red; */
+    /* transform: translateX(2rem); */
+    animation-duration: 0.5s;
+    animation-name: arrowAnimation;
+    /* animation-play-state: ; */
+}
+
+@keyframes arrowAnimation
+{
+    to{transform: translateX(2rem);}
+}
 
 
 /* ------------------------------------------------------------------------------------- */
@@ -681,6 +706,8 @@ body
 .howWeMove_button
 {
     left:7vw;
+    font-family: "Exo 2", sans-serif;
+    font-weight: 600;
 }
 
 .howWeMove_container
@@ -836,6 +863,7 @@ body
 {
     /* background-color: red; */
     height:50vh;
+    width:100vw;
     position: relative;
     top:50vh;
     display: flex;
@@ -847,7 +875,7 @@ body
     top:5rem;
     display: inline-block;
     width:45vw;
-    height:20rem;
+    height:20vw;
     display: grid;
     place-items: center;
     box-shadow: 2px 2px 100px rgba(0, 0, 0, 0.333);
@@ -865,16 +893,18 @@ body
 }
 .cnsText
 {
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 .cnsButton
 {
     border:none;
     border:1px solid black;
     background-color: #00368d00;
-    padding:0.75rem 3rem;
+    padding:0.5rem 3rem;
     border-radius: 5rem;
     font-size: 1rem;
+    display: flex;
+    align-items: center;
 }
 #cnsButton2
 {
