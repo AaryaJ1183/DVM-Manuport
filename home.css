@@ -143,7 +143,7 @@ body
 #goldmode-transition-gradient
 {
     z-index:500;
-    height:150vh;
+    height:100vh;
     position: absolute;
     background-color: red;
     width:50vw;
