@@ -677,6 +677,7 @@ flexibleLi.addEventListener('click', function() {
 let loaderPercent = document.getElementById('loader-percent');
 let loaderWhite = document.getElementById('loader-white');
 let loaderScreenDiv = document.getElementById('loader-screen');
+document.body.style.overflow='hidden';
 
 var j=0;
 
@@ -692,7 +693,10 @@ let loaderInterval = setInterval(()=>{
         setTimeout(()=>{
             translateLoader();
         },1000);
+
+    document.body.style.overflowY='visible';
     }
+
 },15);
 
 function expandLoader()

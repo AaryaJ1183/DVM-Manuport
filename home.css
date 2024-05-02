@@ -15,7 +15,7 @@ body
     /* overflow-x: hidden; */
     background-color: #F6FAFF;
     position: relative;
-    left:1.5vw;
+    /* left:1.5vw; */
 }
 
 /* LOADER-SCREEN------------------------------------------------------------------------------ */
@@ -27,11 +27,13 @@ body
     z-index: 1002;
 
     position: absolute;
+    /* left:0; */
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 5rem;
     font-family: "Exo 2", sans-serif;
+
 }
 #loader-white
 {
