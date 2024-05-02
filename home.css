@@ -12,8 +12,137 @@ html
 }
 body
 {
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     background-color: #F6FAFF;
+}
+
+/* LOADER-SCREEN------------------------------------------------------------------------------ */
+#loader-screen
+{
+    height:100vh;
+    width:100vw;
+    background-color: #00368d;
+    z-index: 1002;
+
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    font-family: "Exo 2", sans-serif;
+}
+#loader-white
+{
+    position: absolute;
+    height:50vh;
+    width:50vw;
+    background-color: white;
+    border-radius: 10vw 0;
+}
+#loader-percent
+{
+    /* background-color: red; */
+    z-index: 1;
+
+    font-family: "Exo 2", sans-serif;
+    font-size: 4rem;
+    font-weight: 450;
+    font-style: italic;
+    -webkit-text-fill-color: rgba(240, 248, 255, 0);
+    -webkit-text-stroke-width: 1.5px;
+}
+
+/* GOLD-MODE------------------------------------------------------------------------------ */
+.goldmode-div
+{
+    background-color: white;
+    padding:5px;
+    border-radius: 50%;
+    position: fixed;
+    bottom:25px;
+    right:25px;
+
+    height:125px;
+    width:125px;
+    
+    z-index: 1000;
+
+    display: grid;
+    place-items: center;
+
+    transition: all 0.5s ease;
+}
+.goldmode-div:hover
+{
+    background-color: goldenrod;
+}
+
+
+#goldmode-outer
+{
+    animation: rotateSVG 10s linear infinite;
+    /* display:none; */
+}
+
+@keyframes rotateSVG {
+    from{transform:rotate(0deg)}
+    to{transform:rotate(360deg)}
+
+}
+.goldmode-inner
+{
+    height:80px;
+    width:80px;
+    position: absolute;
+    border:2px solid #00358D;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+#gold-star1
+{
+    height:10px;
+    position: relative;
+    top:15px;
+    left:10px;
+
+}
+#gold-star2
+{
+    height:20px;
+    position:relative;
+    top:0px;
+    left:-10px;
+   
+}
+#gold-star3
+{
+    height:10px;
+    position:relative;
+    top:5px;
+    left:-10px;
+   
+}
+#gold-star4
+{
+    height:20px;
+    position:relative;
+    top:-10px;
+    left:10px;
+}
+
+#goldmode-transition-gradient
+{
+    z-index:500;
+    height:150vh;
+    position: absolute;
+    background-color: red;
+    width:50vw;
+    transform: translateX(100vw);
+
+
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,0) 27%, rgba(192,140,21,0.8814119397759104) 50%, rgba(0,212,255,0) 75%);
 }
 
 
@@ -37,6 +166,8 @@ body
     height:35px;
     left:5vw;
     color: #00358D;
+    z-index:1000;
+    
 }
 .navLogoText
 {
@@ -44,6 +175,9 @@ body
     /* font-size: 2px; */
 }
 
+
+/* ------------------------ ------------------------ ------------------------ */
+/* HAMBURGER MENU */
 .hamburger
 {
     position: absolute;
@@ -51,7 +185,108 @@ body
     right:0;
     width:10%;
     /* width:120%; */
+    cursor: pointer;
 }
+
+.hamburger-menu
+{
+    position: absolute;
+    top:0px;
+    height:100vh;
+    width:100vw;
+    background-image: radial-gradient(#00358D,#031b41);
+    z-index:1001;
+    transform: translateX(100vw);
+}
+
+#hamburgerLogoContainer
+{
+    /* display: none; */
+    top:2rem;
+    color:white;
+}
+.fa-xmark
+{
+    color:white;
+    font-size:50px;
+    position: absolute;
+    right:2.5rem;
+    top:1rem;
+    cursor: pointer;
+}
+.hamburger-options
+{
+    display: flex;
+    width:100vw;
+    height:80vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+    font-family: sans-serif;
+    position: relative;
+    top:10vh;
+    font-size: 1rem;
+    gap:1rem;
+}
+
+.ham-anchor
+{
+    color:white;
+    text-decoration: none;
+    /* background-color: blue; */
+   
+}
+.wave
+{
+    /* display:none; */
+    /* visibility: hidden; */
+    opacity: 0;
+    /* width:0; */
+    color:white;
+    font-size: 1rem;
+    margin:0;
+    gap:0;
+    /* background-color: red; */
+    transition: all 0.25s ease-in-out;
+}
+/* .hamburger-options a:nth-child(1):hover + .wave:nth-child(1)
+{
+    color:red;
+    visibility: visible;
+} */
+.hamburger-options a:nth-child(1):hover + .fa-wave-square {
+   opacity: 1;
+   
+}
+.hamburger-options a:nth-child(3):hover + .fa-wave-square {
+    opacity: 1;
+}
+.hamburger-options a:nth-child(5):hover + .fa-wave-square {
+    opacity: 1;
+}
+.hamburger-options a:nth-child(7):hover + .fa-wave-square {
+    opacity: 1;
+}
+.hamburger-options a:nth-child(9):hover + .fa-wave-square {
+    opacity: 1;
+}
+.hamburger-options a:nth-child(11):hover + .fa-wave-square {
+    opacity: 1;
+}
+.hamburger-options a:nth-child(13):hover + .fa-wave-square {
+    opacity: 1;
+}
+.hamburger-options a:nth-child(15):hover + .fa-wave-square {
+    opacity: 1;
+}
+.hamburger-options a:nth-child(17):hover + .fa-wave-square {
+    opacity: 1;
+}
+.hamburger-options a:nth-child(19):hover + .fa-wave-square {
+    opacity: 1;
+}
+
 
 
 /* section1------------------------------------------------------------------ */
@@ -84,8 +319,11 @@ body
     font-family: "Exo 2", sans-serif;
     font-size: 8rem;
     font-weight: 650;
-    color:black;
+    /* color:rgb(168, 48, 48); */
+    color:hsl(0, 11%, 7%);
     margin-left: 4rem;
+    mix-blend-mode:color-burn;
+    /* mix-blend-mode:soft-light; */
 
 }
 .whiteText
@@ -95,9 +333,10 @@ body
     font-size: 8rem;
     font-weight: 650;
     font-style: italic;
-    -webkit-text-fill-color: aliceblue;
+    -webkit-text-fill-color: rgba(240, 248, 255, 0);
     -webkit-text-stroke-width: 1.5px;
     margin-left: 1rem;
+    mix-blend-mode:color-burn;
 }
 .heroSectionText [id="1B"]
 {
@@ -170,8 +409,29 @@ body
 .section2_paraHeader
 {
     font-size: 1.5rem;
+    position: relative;
+    margin:2rem;
 }
 
+.showTxt
+{
+    display: block;
+    /* color:red; */
+    /* visibility: visible; */
+    transition: all 0.5s ease-in-out;
+    /* transform:; */
+}
+/* .showTxt::before
+{
+    content:"";
+
+} */
+.hideTxt
+{
+    display: none;
+    /* visibility: hidden; */
+    transition: all 0.5s ease-in-out;
+}
 /* ----------------------------------------------------------------------------- */
 #section3
 {   
@@ -317,6 +577,69 @@ body
 
 /* --------------------------------------------------------------------------------- */
 /* How we Move Section */
+/* .howWeMove_container
+{
+    height:100vh;
+
+
+    overflow-y: auto; PERSPECTIVE
+    overflow-x: hidden; PERSPECTIVE
+    perspective: 10px;PERSPECTIVE
+}
+.howWeMoveWrapper
+{
+    height:100%;
+    position: relative;
+
+    transform-style:preserve-3d;PERSPECTIVE
+    z-index: -1;PERSPECTIVE
+}
+
+.howWeMove_header
+{
+    display: inline;
+    position: absolute;
+    left:10rem;
+    top:10rem;
+    font-size: 3rem;
+    font-family: sans-serif;
+    font-weight: 400;
+}
+.howWeMove_description
+{
+    display: inline;
+    position: absolute;
+    left:10rem;
+    top:15rem;
+    font-size: 1.25rem;
+    width:35%;
+    font-family: sans-serif;
+}
+.howWeMove_container
+{
+    height: 30vw;
+    display: flex;
+    justify-content: center;
+    right:10rem;
+    top:5rem;
+    
+
+    transform: translateZ(-10px) scale(2);
+
+}
+.howWeMove_img
+{
+
+    height:100%;
+    background-color: white;
+    border-top-left-radius: 5rem;
+
+
+} ------------------------------------------------------------------*/
+
+
+  
+
 
 #howWeMoveSection
 {
@@ -331,11 +654,16 @@ body
 
     position: relative;
 }
+/* .howWeMoveWrapper
+{
+    background-color: red;
+} */
 .howWeMove_about
 {
     position: relative;
     top:15rem;
     left:10vw;
+
 }
 .howWeMove_header
 {
@@ -374,7 +702,7 @@ body
 
     position: relative;
     right:4rem;
-    /* animation: howWeMoveAnimation 0.75s linear infinite; */
+    animation: howWeMoveAnimation 0.75s linear infinite;
 }
 
 /* @keyframes howWeMoveAnimation {
@@ -451,6 +779,7 @@ body
     perspective: 1500px;
     min-height:30rem;
     width:90vw;
+    /* background-color: red; */
 }
 .card
 {
@@ -493,4 +822,148 @@ body
 {
     font-size: 1rem;
     font-weight: 400;
+}
+#joinTeamCardContainer
+{
+    /* background-color: red; */
+    padding:0rem;
+}
+
+/* -------------------------------------------------------------------------------------------------- */
+/* COMMODITIES AND SERVICES CARDS */
+
+.commoditiesAndServicesSection
+{
+    /* background-color: red; */
+    height:50vh;
+    position: relative;
+    top:50vh;
+    display: flex;
+    justify-content: center;
+}
+.cnsCard
+{   
+    /* position: absolute; */
+    top:5rem;
+    display: inline-block;
+    width:45vw;
+    height:20rem;
+    display: grid;
+    place-items: center;
+    box-shadow: 2px 2px 100px rgba(0, 0, 0, 0.333);
+    margin:5rem 1rem;
+    font-family: "Exo 2", sans-serif;
+
+    /* border:2px solid red; */
+
+    /* background-color: ; */
+}
+.cnsHeader
+{
+    font-weight: 600;
+    font-size: 1rem;   
+}
+.cnsText
+{
+    font-size: 2rem;
+}
+.cnsButton
+{
+    border:none;
+    border:1px solid black;
+    background-color: #00368d00;
+    padding:0.75rem 3rem;
+    border-radius: 5rem;
+    font-size: 1rem;
+}
+#cnsButton2
+{
+
+    border:1px solid rgb(255, 255, 255);
+    color:white;
+}
+
+
+
+#cnsCard1
+{
+    border-bottom-left-radius: 5rem;
+    background-color: #99bdcd;
+    position: relative;
+    top:-4rem;
+}
+#cnsCard2
+{
+    position: relative;
+    top:-4rem;
+}
+.cnsCardContainer
+{
+    /* background-color: red; */
+    height:80%;
+    position: relative;
+    top:4rem;
+
+}
+
+
+.cardGlare1::before
+{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    object-fit: cover;
+    border-bottom-left-radius: 5rem;
+
+    background: rgb(2,0,36);
+    background: linear-gradient(43deg, rgba(2,0,36,0) 0%, rgba(207, 207, 217, 0.253) 49%, hsla(240, 12%, 83%, 0.253) 50%, rgba(0,212,255,0) 100%);
+    background-size: 1000% 1000%;
+    opacity: 0.2;
+    background-position: 00% 00%;
+    z-index:-5;
+
+    transition: all 500ms ease-in-out;
+}
+
+.cardGlare1:hover::before
+{
+    background-position: 90% 90%;
+}
+
+.cardGlare2::before
+{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    object-fit: cover;
+    border-top-right-radius: 5rem;
+
+    
+    background: rgb(2,0,36);
+    background: linear-gradient(43deg, rgba(2,0,36,0) 0%, rgba(207, 207, 217, 0.553) 49.5%, hsla(240, 12%, 83%, 0.553) 49.6%, rgba(0,212,255,0) 100%);
+    background-size: 1000% 1000%;
+    opacity: 0.4;
+    background-position: 0 0;
+    z-index:-5;
+
+    transition: all 500ms ease-in-out;
+}
+
+.cardGlare2:hover::before
+{
+    background-position: 90% 90%;
+}
+
+
+#cnsCard2
+{
+    border-top-right-radius: 5rem;
+    background-color: #0b2c60;
+    color:white;
 }

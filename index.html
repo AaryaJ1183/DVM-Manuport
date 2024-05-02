@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 minimum-scale=1.0">
     <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="media.css">
@@ -12,11 +12,73 @@
 </head>
 <body>
 
+    <div id="loader-screen">
+        <div id="loader-white"></div>
+        <p id="loader-percent">0%</p>
+    </div>
+
+    <div class="goldmode-div" id="goldmode-div">
+        <img id="goldmode-outer" src="./resources/GoldMode/GoldMode.svg">
+        <!-- <img class="goldmode-inner" src="./GoldModeInner.svg"> -->
+        <div class="goldmode-inner">
+            <img  id="gold-star1" src="./resources/GoldMode/GoldModeStar1.svg">
+            <img  id="gold-star2" src="./resources/GoldMode/GoldModeStar1.svg">
+            <img  id="gold-star3" src="./resources/GoldMode/GoldModeStar1.svg">
+            <img  id="gold-star4" src="./resources/GoldMode/GoldModeStar1.svg">
+        </div>
+        
+
+    </div>
+
+    <div id="goldmode-transition-gradient"></div>
+    
+
     <div class="nav glass" id="nav2">
           
-            <img class="navLogoContainer" src="./ManuportLogo.svg">
-            <i class="hamburger fa-solid fa-bars"></i>
+            <img id="navLogoContainer" class="navLogoContainer" src="./ManuportLogo.svg">
             
+            <!-- Nav-HAMBURGER -->
+            <i id="hamburger" class="hamburger fa-solid fa-bars"></i>
+
+            
+
+            <!-- Nav-OPTIONS -->
+            <div class="nav-options">
+
+                
+            </div>
+            
+    </div>
+
+    <div id="hamburger-menu" class="hamburger-menu">
+
+            <img id="hamburgerLogoContainer" class="navLogoContainer" src="./ManuportLogo.svg">
+            <i id="hamburger-cross" class="fa-solid fa-xmark"></i>
+
+            <div class="hamburger-options">
+                <a class="ham-anchor" href="https://www.manuport-logistics.com/home">Home</a>
+                <i class="wave fa-solid fa-wave-square"></i>
+                <a class="ham-anchor" href="https://www.manuport-logistics.com/services">Services</a>
+                <i class="wave fa-solid fa-wave-square"></i>
+                <a class="ham-anchor" href="https://www.manuport-logistics.com/commodities">Commodities</a>
+                <i class="wave fa-solid fa-wave-square"></i>
+                <a class="ham-anchor" href="https://www.manuport-logistics.com/digital">Digital</a>
+                <i class="wave fa-solid fa-wave-square"></i>
+                <a class="ham-anchor" href="https://www.manuport-logistics.com/careers">Careers</a>
+                <i class="wave fa-solid fa-wave-square"></i>
+                <a class="ham-anchor" href="https://www.manuport-logistics.com">Life at MPL</a>
+                <i class="wave fa-solid fa-wave-square"></i>
+                <a class="ham-anchor" href="https://www.manuport-logistics.com/jobs">Jobs</a>
+                <i class="wave fa-solid fa-wave-square"></i>
+                <a class="ham-anchor" href="https://www.manuport-logistics.com/about">About</a>
+                <i class="wave fa-solid fa-wave-square"></i>
+                <a class="ham-anchor" href="https://www.manuport-logistics.com/esg">ESG</a>
+                <i class="wave fa-solid fa-wave-square"></i>
+                <a class="ham-anchor" href="https://www.manuport-logistics.com/contact">Contact</a>
+                <i class="wave fa-solid fa-wave-square"></i>
+
+            </div>
+
     </div>
 
     <section id="heroSection">
@@ -52,40 +114,40 @@
         
         <div class="section2_paras">
 
-            <li class="section2_li">
+            <li class="section2_li" id="weBelieveLi">
                 <div class="different" onclick="changeImg('./resources/img1.webp')">
                     <p class="section2_paraHeader" id="section2-1A">We believe in People</p>
-                    <p class="section2_paraText" id="section2-1B">We believe in our people because they are our greatest asset. At MPL, we are not just a company; we are a family. Each and every one of us shares our unique MPL culture, in which everyone is valued, supported, and empowered to reach their full potential.</p>
+                    <p class="section2_paraText showTxt" id="section2-1B">We believe in our people because they are our greatest asset. At MPL, we are not just a company; we are a family. Each and every one of us shares our unique MPL culture, in which everyone is valued, supported, and empowered to reach their full potential.</p>
                 </div>
                 <div class="section2_divider"></div>
-                <div class="section2_divider section2_loader"></div>
+                <div class="section2_divider section2_loader" id="section2_loader1"></div>
             </li>
 
-            <li class="section2_li">
+            <li class="section2_li" id="weSolveLi">
                 <div class="different" onclick="changeImg('./resources/img2.webp')">
                     <p class="section2_paraHeader" id="section2-2A">We Solve Each and Any Shipping Problem</p>
-                    <p class="section2_paraText" id="section2-2B">We work with teams per commodity, each with specific domain expertise, to provide high-quality solutions or knowledge for any product or request. With offices around the world, we have excellent knowledge of local markets, laws, and customs.</p>
+                    <p class="section2_paraText hideTxt" id="section2-2B">We work with teams per commodity, each with specific domain expertise, to provide high-quality solutions or knowledge for any product or request. With offices around the world, we have excellent knowledge of local markets, laws, and customs.</p>
                 </div>
                 <div class="section2_divider"></div>
-                <div class="section2_divider section2_loader"></div>
+                <div class="section2_divider section2_loader" id="section2_loader2"></div>
             </li>
 
-            <li class="section2_li">
+            <li class="section2_li" id="pointOfContactLi">
                 <div class="different" onclick="changeImg('./resources/img3.webp')">
                     <p class="section2_paraHeader" id="section2-3A">Single Point of Contact</p>
-                    <p class="section2_paraText" id="section2-3B">Our colleagues assist and guide customers from end to end in all logistics processes, including customs clearance and tender and procurement services.</p>
+                    <p class="section2_paraText hideTxt" id="section2-3B">Our colleagues assist and guide customers from end to end in all logistics processes, including customs clearance and tender and procurement services.</p>
                 </div>
                 <div class="section2_divider"></div>
-                <div class="section2_divider section2_loader"></div>
+                <div class="section2_divider section2_loader" id="section2_loader3"></div>
             </li>
 
-            <li class="section2_li">
+            <li class="section2_li" id="flexibleLi">
                 <div class="different" onclick="changeImg('./resources/img4.webp')">
-                    <p class="section2_paraHeader" id="section2-3A">Flexible & Fast Decision-Making</p>
-                    <p class="section2_paraText" id="section2-3B">Our flexibility and desire to help customers in any way possible really sets us apart. Our fast decision-making comes from the open internal communication strategy we follow.</p>
+                    <p class="section2_paraHeader" id="section2-4A">Flexible & Fast Decision-Making</p>
+                    <p class="section2_paraText hideTxt" id="section2-4B">Our flexibility and desire to help customers in any way possible really sets us apart. Our fast decision-making comes from the open internal communication strategy we follow.</p>
                 </div>
                 <div class="section2_divider"></div>
-                <div class="section2_divider section2_loader"></div>
+                <div class="section2_divider section2_loader" id="section2_loader4"></div>
             </li>
 
 
@@ -129,16 +191,19 @@
     </div>
 
     <section class="howWeMoveSection" id="howWeMoveSection">
-        <div class="howWeMove_about">
-            <h2 class="howWeMove_header">How we Move</h2>
-            <p class="howWeMove_description">Manuport Logistics offers a different approach to shipping, guided by creative thinking. Ship, barge, plane, train, truck, or a combination. For you, we move mountains.</p>
+        <div class="howWeMoveWrapper">
+            <div class="howWeMove_about">
+                <h2 class="howWeMove_header">How we Move</h2>
+                <p class="howWeMove_description">Manuport Logistics offers a different approach to shipping, guided by creative thinking. Ship, barge, plane, train, truck, or a combination. For you, we move mountains.</p>
+                
+                <button class="howWeMove_button paraButton"></button>
+            </div>
             
-            <button class="howWeMove_button paraButton"></button>
+            <div class="howWeMove_container" id="howWeMove_container">
+                    <img class="howWeMove_img" id="howWeMove_img" alt="Plane">
+            </div>
         </div>
-        
-        <div class="howWeMove_container">
-            <img class="howWeMove_img" id="howWeMove_img" alt="Plane">
-        </div>
+       
 
     </section>
 
@@ -162,25 +227,47 @@
 
         <container class="card-container">
 
-            <div id="card" class="card">
+            <div id="joinTeamCardContainer">
+                <div id="card" class="card">
 
-                <div class="card-img-div">
-                    <img class="card-img" src="./resources/3D/card1.webp">
-                </div>
-
-                <div class="card-description-div">
-                    <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quod necessitatibus officiis culpa iure, dolorum exercitationem sapiente consequatur rem tempora, fugiat expedita ipsum obcaecati dicta voluptas molestias adipisci autem tempore!
-                    Distinctio unde veniam reiciendis illum facilis alias a aliquam, dolorum deleniti rerum eum enim ad sit consequuntur odio vero excepturi quod dolores repellendus blanditiis nihil! Nihil officiis iure quo laborum.
-                    Tempore blanditiis aut eveniet delectus fuga, dolorum perferendis, sapiente esse sit repudiandae quaerat non dolores nemo voluptatibus corrupti. Blanditiis mollitia placeat voluptas cum magnam impedit repellat excepturi soluta veniam harum.
-                    Id facilis rem nemo! Nemo, libero animi atque distinctio enim blanditiis modi amet quam voluptatem commodi consequuntur dolor expedita laudantium beatae cumque sequi? Velit sit labore saepe. Corrupti, minus numquam.
-                    Doloremque rerum saepe quasi totam obcaecati debitis! Alias distinctio explicabo quibusdam nemo, autem magnam cupiditate molestiae quae! Maiores ipsa, perferendis neque id sapiente quos. Est temporibus non aliquam possimus? Qui.</p>
+                    <div class="card-img-div">
+                        <img class="card-img" src="./resources/3D/card1.webp">
+                    </div>
+    
+                    <div class="card-description-div">
+                        <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quod necessitatibus officiis culpa iure, dolorum exercitationem sapiente consequatur rem tempora, fugiat expedita ipsum obcaecati dicta voluptas molestias adipisci autem tempore!
+                        Distinctio unde veniam reiciendis illum facilis alias a aliquam, dolorum deleniti rerum eum enim ad sit consequuntur odio vero excepturi quod dolores repellendus blanditiis nihil! Nihil officiis iure quo laborum.
+                        Tempore blanditiis aut eveniet delectus fuga, dolorum perferendis, sapiente esse sit repudiandae quaerat non dolores nemo voluptatibus corrupti. Blanditiis mollitia placeat voluptas cum magnam impedit repellat excepturi soluta veniam harum.
+                        Id facilis rem nemo! Nemo, libero animi atque distinctio enim blanditiis modi amet quam voluptatem commodi consequuntur dolor expedita laudantium beatae cumque sequi? Velit sit labore saepe. Corrupti, minus numquam.
+                        Doloremque rerum saepe quasi totam obcaecati debitis! Alias distinctio explicabo quibusdam nemo, autem magnam cupiditate molestiae quae! Maiores ipsa, perferendis neque id sapiente quos. Est temporibus non aliquam possimus? Qui.</p>
+                    </div>
                 </div>
             </div>
+
+            
         </container>
         
     </section>
 
+    <section class="commoditiesAndServicesSection">
 
+        <div class="cnsCardContainer" id="cnsCardContainer1">
+            <div class="cnsCard cnsCard1 cardGlare1" id="cnsCard1">
+                <h3 class="cnsHeader">COMMODITIES</h3>
+                <p class="cnsText">What We Move</p>
+                <button class="cnsButton" id="cnsButton1">Commodities</button>
+            </div>
+        </div>
+            
+        <div class="cnsCardContainer" id="cnsCardContainer2">
+            <div class="cnsCard cnsCard2 cardGlare2" id="cnsCard2">
+                <h3 class="cnsHeader">OUR SERVICES</h3>
+                <p class="cnsText">How We Move</p>
+                <button class="cnsButton" id="cnsButton2">Services</button>
+            </div>
+        </div>
+        
+    </section>
     <!-- thought: defer or not? -->
     <script src="script.js"></script>
 </body>

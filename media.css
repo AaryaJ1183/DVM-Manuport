@@ -45,6 +45,10 @@
         /* background-color: red; */
         margin:2rem 1rem;
     }
+
+    body{
+        overflow-x:hidden;
+    }
 }
 
 
@@ -70,9 +74,9 @@
 /* -------------------------------------------------------------------------------------------- */
 @media all and (width<900px)
 {
-    .howWeMoveSection
+    /* .howWeMoveSection
     {
-        /* flex-direction: column; */
+        flex-direction: column;
         position: relative;
         background-color: #98a1a5;
     }
@@ -93,7 +97,7 @@
         left:5vw;
         top:0;
         
-    }
+    } */
 
     .joinTeam_text
     {
@@ -131,6 +135,18 @@
 
         background-color:rgb(215, 199, 199);
 
+    }
+
+    .section2_loader
+    {   
+        position: relative;
+        /* bottom:10rem; */
+    }
+
+    .joinTeamSection
+    {
+        position: relative;
+        top:120vw;
     }
 }
 /* -------------------------------------------------------------------------------------------- */
@@ -190,11 +206,16 @@
     position: relative;
     left:-5vw;
     }
-    .section2_divider
+    .section2_divider 
     {
         position: relative;
         width:50vw;
         /* left:-10vw; */
+    }
+    .section2_loader
+    {
+        position: relative;
+        width:50vw;
     }
 
 }
@@ -203,7 +224,7 @@
 /* -------------------------------------------------------------------------------------------- */
 @media all and (900px<width<1300px)
 {
-    .howWeMove_about
+    /* .howWeMove_about
     {
         left:5vw;
     }
@@ -212,5 +233,5 @@
         right:6vw;
         height:30vw;
         width:30vw;
-    }
+    } */
 }

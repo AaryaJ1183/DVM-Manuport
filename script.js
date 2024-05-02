@@ -6,6 +6,8 @@ function changeImg(sauce)
     section2img.src = sauce;
     section2img.style.transform='scale(1)';
     section2img.style.transitionDuration='1s';
+
+    // let section2loader = document.querySelector('.section2_loader');
 }
 
 
@@ -196,6 +198,7 @@ let pfpArr4= [ 'https://a.storyblok.com/f/240783/420x420/71afd93259/belgiumimage
 
 
 
+let howWeMoveImgContainer = document.getElementById("howWeMove_container");
 
 
 // animateCountries('#containerX', countryArrX, pfpArrX, animationSpeed);
@@ -260,6 +263,7 @@ for(j=0;j<multiplicity;j++)
         countryDiv.appendChild(countryText);
         container.appendChild(countryDiv);
     }
+    
 
     window.addEventListener('scroll', () => {
         let scrollPosition = window.scrollY;
@@ -290,8 +294,6 @@ let howWeMoveImgArr = ['./resources/Cargo/Cargo-Plane-Business.webp'
                     ];
 
 
-
-
 let i=0;
 
 function changeImgWeMove(ele,eleArr)
@@ -304,9 +306,9 @@ function changeImgWeMove(ele,eleArr)
     ele.src = eleArr[i];    
     i++;
     
-    console.log("changeImgWeMove working!")
+    // console.log("changeImgWeMove working!")
     // setTimeout(changeImgWeMove(),3);
-    setTimeout(()=>changeImgWeMove(ele, eleArr), 3000);
+    setTimeout(()=>changeImgWeMove(ele, eleArr), 2000);
 }
 
 changeImgWeMove(howWeMoveImg,howWeMoveImgArr);
@@ -314,25 +316,107 @@ changeImgWeMove(howWeMoveImg,howWeMoveImgArr);
 
 
 // -------------------------------------------
+let howWeMoveContainer = document.getElementById('howWeMove_container');
+let howWeMoveScrollPosition;
+let howWeMoveMovementAmt 
+
+window.addEventListener('scroll', () => {
+    howWeMoveScrollPosition = window.scrollY;
+    // howWeMoveMovementAmt = (howWeMoveScrollPosition) / 1;
+
+
+    // howWeMoveContainer.style.transform = `translateY(${howWeMoveScrollPosition}px)`;
+});
+
+
+// -------------------------------------------
 // 3D TILT EFFECT
 const card = document.getElementById('card');
-const cardRect = card.getBoundingClientRect();
+const cnsCard1 = document.getElementById('cnsCard1');
+const cnsCardContainer1 = document.getElementById('cnsCardContainer1');
+const cnsCardContainer2 = document.getElementById('cnsCardContainer2');
+const joinTeamCardContainer = document.getElementById('joinTeamCardContainer');
+
+const cnsCard2 = document.getElementById('cnsCard2');
+// const cnsCardContainer1 = document.getElementById('cnsCardContainer2');
+
+
+function tiltCard(cardParam,cardContainerParam,tiltXParam, tiltYParam)
+{
+    // const cardRect = cardParam.getBoundingClientRect();
+
+    // // console.log(cardRect);
+        
+    // cardContainerParam.addEventListener('mousemove', function(e) {
+    //     const centerX = cardRect.left + cardRect.width / 2;
+    //     const centerY = cardRect.top + cardRect.height / 2;
+    //     const deltaX = e.clientX - centerX;
+    //     const deltaY = centerY- e.clientY;
+    //     // const tiltX = (((deltaY)/centerY)*tiltXParam);
+    //     // const tiltY = (((deltaX)/centerX)*tiltYParam);
+        
+    //     const tiltX = ((deltaY)*tiltXParam);
+    //     const tiltY = ((deltaX)*tiltYParam);
+    //     cardParam.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+    //     cardParam.style.transition='all 0.01s ease-in-out';
+
+    //     console.log("Center: " + centerX +", " + centerY);
+    //     console.log("Mouse: " + e.clientX + ", " + e.clientY);
+
+    //     // setInterval(()=>{
+    //     //     console.log("centerX:" + centerX);
+    //     //     console.log("centerY:" + centerY);
+    //     //     console.log("tiltX:" + tiltX);
+    //     //     console.log("tiltY:" + tiltY);
+    //     //     console.log("---------------");
+    //     // },5000);
+    // });
 
     
-card.addEventListener('mousemove', function(e) {
+    
+    // cardContainerParam.addEventListener('mouseleave', function() {
+    //     cardParam.style.transform = 'rotateX(0deg) rotateY(0deg)';
+    //     cardParam.style.transition='all 1s ease-in-out';
+        
+    // });
+
+
+// -----------------------------------------------
+// const cardRect = cardParam.getBoundingClientRect();
+// const cardContainerRect = cardContainerParam.getBoundingClientRect();
+
+cardContainerParam.addEventListener('mousemove', function(e) {
+    const cardRect = cardParam.getBoundingClientRect();
     const centerX = cardRect.left + cardRect.width / 2;
     const centerY = cardRect.top + cardRect.height / 2;
     const deltaX = e.clientX - centerX;
     const deltaY = centerY - e.clientY;
-    const tiltX = (deltaY / centerY) * 35;
-    const tiltY = (deltaX / centerX) * 15;
-    card.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+
+    const tiltX = deltaY * tiltXParam;
+    const tiltY = deltaX * tiltYParam;
+
+    cardParam.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+    cardParam.style.transition = 'all 0.01s ease-in-out';
+
+    // console.log("Center: " + centerX + " " + centerY);
+    // console.log("Mouse: " + e.clientX + " " + e.clientY);
 });
 
-card.addEventListener('mouseleave', function() {
-    card.style.transform = 'rotateX(0deg) rotateY(0deg)';
-    
+cardContainerParam.addEventListener('mouseleave', function() {
+    cardParam.style.transform = 'rotateX(0deg) rotateY(0deg)';
+    cardParam.style.transition = 'all 1s ease-in-out';
 });
+
+
+
+}
+
+tiltCard(card,joinTeamCardContainer,0.0341115,-0.031125);
+tiltCard(cnsCard1,cnsCardContainer1,0.041115,-0.11125);
+tiltCard(cnsCard2,cnsCardContainer2, 0.041115,-0.11125);
+
+
+
 
 
 // function add3d(ele)
@@ -342,3 +426,288 @@ card.addEventListener('mouseleave', function() {
 // }
 
 // add3d(card);
+
+
+//HAMBURGER MENU--------------------------------------------------------------------------------------
+// let hamburger = document.querySelector('.hamburger');
+let hamburger = document.getElementById('hamburger');
+let hamburgerMenu = document.getElementById('hamburger-menu');
+let logoSVG = document.getElementById('navLogoContainer');
+
+
+hamburger.onclick = () => {
+    // logoSVG.style.color = 'red';
+
+    hamburgerMenu.style.transition='transform 0.5s ease-in-out';
+    hamburgerMenu.style.transform = 'translateX(0vw)'; 
+
+    document.body.style.overflow='hidden';
+}
+
+let hamburgerCross = document.getElementById('hamburger-cross');
+
+hamburgerCross.onclick= () => {
+    hamburgerMenu.style.transform = 'translateX(100vw)';
+    document.body.style.overflowY='scroll';
+}
+
+//GOLDMODE-DIRECTION-WISE-CHANGE ------------------------------------------------------------------------------------------
+
+
+// let goldModeSVGOuter = document.getElementById('goldmode-outer');
+// var oldScrollY = window.scrollY;
+// // let direction;
+
+
+// window.onscroll=()=>{
+//     if(oldScrollY<window.scrollY)
+//     {
+//         // direction = 'down';
+//         goldModeSVGOuter.style.display='none';
+//     }
+//     else if(oldScrollY>window.scrollY)
+//     {
+//         // direction = 'up';
+//         goldModeSVGOuter.style.display='block';
+//     }
+
+//     console.log("Direction: "+ direction);
+// }
+
+let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+let scrollDirection;
+let goldmodeOuter = document.getElementById('goldmode-outer');
+let goldmodeOuterDiv = document.getElementById('goldmode-div');
+
+window.addEventListener('scroll', function() {
+    let currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScrollTop > lastScrollTop) {
+        scrollDirection = 'down';
+        goldmodeOuter.style.display='none';
+        goldmodeOuterDiv.style.transform='scale(0.75)';
+        goldmodeOuterDiv.style.right='0px';
+        goldmodeOuterDiv.style.bottom='0px';
+
+        goldmodeOuterDiv.style.transition='all 0.15s ease-in-out';
+
+    } else {
+        scrollDirection = 'up';
+        goldmodeOuter.style.display='block';
+        goldmodeOuterDiv.style.transform='scale(1)';
+        goldmodeOuterDiv.style.right='25px';
+        goldmodeOuterDiv.style.bottom='25px';
+
+        goldmodeOuterDiv.style.transition='all 0.15s ease-in-out';
+    }
+
+    lastScrollTop = currentScrollTop;
+
+    console.log('Scroll direction:', scrollDirection);
+});
+
+let goldmodeTransitionGradient = document.getElementById('goldmode-transition-gradient');
+// let goldCount=0;
+let goldState='right';
+
+window.addEventListener("scroll", ()=>{
+
+    let scrollTopPosn = window.scrollY;
+    goldmodeTransitionGradient.style.top = scrollTopPosn + 'px';
+
+})
+
+goldmodeOuterDiv.addEventListener("click", ()=>{
+    
+    if(goldState=='right')
+    {
+        goldmodeTransitionGradient.style.transform='translateX(-50vw)';
+        goldmodeTransitionGradient.style.transition='all 1s ease';
+        goldState='left';
+    }
+    else if(goldState=='left')
+    {
+        goldmodeTransitionGradient.style.transform='translateX(100vw)';
+        goldState='right';
+    }
+    
+    
+
+    // goldmodeTransitionGradient.style.transform='translateX(100vw)';
+    // goldCount++;
+    // console.log(goldCount);
+})
+
+// if(goldCount%2===1)//odd
+// {
+//     goldmodeTransitionGradient.style.transform='translateX(100vw)';
+// }
+
+
+
+
+//We're Different Section Collapse------------------------------------------------------------------------------------------
+
+
+let weBelieveLi = document.getElementById('weBelieveLi');
+let weBelieveLiText = document.getElementById('section2-1B');
+// weBelieveLiText.style.visibility='visible';
+// weBelieveLiText.classList.add('showTxt');
+
+let weSolveLi = document.getElementById('weSolveLi');
+let weSolveLiText = document.getElementById('section2-2B');
+// weSolveLiText.style.visibility='hidden';
+// weSolveLiText.classList.add('hideTxt');
+
+let pointOfContactLi = document.getElementById('pointOfContactLi');
+let pointOfContactLiText = document.getElementById('section2-3B');
+// pointOfContactLiText.style.visibility='hidden';
+// pointOfContactLiText.classList.add('hideTxt');
+
+let flexibleLi = document.getElementById('flexibleLi');
+let flexibleLiText = document.getElementById('section2-4B');
+// flexibleLiText.style.visibility='hidden';
+// flexibleLiText.classList.add('hideTxt');
+
+
+//COLLAPSE METHOD----------------------------------------
+// let collapseState=true;
+// let collapseCount=0;
+
+// weBelieveLi = {
+//     collapseState:false,
+//     collapseText: document.getElementById('section2-1B')
+// }
+// weSolveLi = {
+//     collapseState:true,
+//     collapseText:document.getElementById('section2-2B')
+// }
+// pointOfContactLi = {
+//     collapseState:true,
+//     collapseText:document.getElementById('section2-3B')
+// }
+// flexibleLi = {
+//     collapseState:true,
+//     collapseText:document.getElementById('section2-4B')
+// }
+
+// function checkCollapse(element)
+// {
+//     if(element.collapseState==true)
+//     {
+//         element.collapseText.classList.remove('showTxt');
+//         element.collapseText.classList.add('hideTxt');
+//     }
+//     else
+//     {
+//         element.collapseText.classList.remove('hideTxt');
+//         element.collapseText.classList.add('showTxt');
+//     }
+// }
+
+// weBelieveLi.addEventListener('click', function() {
+//         weBelieveLi.collapseState=false;
+//         collapseCount++;
+// });
+// weSolveLi.addEventListener('click', function() {
+//     weSolveLi.collapseState=false;
+//     collapseCount++;
+// });
+// pointOfContactLi.addEventListener('click', function() {
+//     weSolveLi.collapseState=false;
+//     collapseCount++;
+// });
+// flexibleLi.addEventListener('click', function() {
+//     weSolveLi.collapseState=false;
+//     collapseCount++;
+// });
+//------------------------------------------------------------
+
+let section2Loader1 = document.getElementById('section2_loader1');
+let section2Loader2 = document.getElementById('section2_loader2');
+let section2Loader3 = document.getElementById('section2_loader3');
+let section2Loader4 = document.getElementById('section2_loader4');
+
+let section2TextArr = [weBelieveLiText,weSolveLiText,
+    pointOfContactLiText,flexibleLiText]
+
+let section2LoaderArr = [section2Loader1,section2Loader2,section2Loader3,section2Loader4]
+
+function togglePara(clickedSec)
+{
+    section2TextArr.forEach(sec=>{
+        sec.classList.remove('showTxt');
+        sec.classList.add('hideTxt');
+    });
+    clickedSec.classList.add('showTxt');
+    clickedSec.classList.remove('hideTxt');
+}
+function animateLoader(loaderParam)
+{
+    loaderParam.style.transform='scaleX(0%)';
+    setInterval(()=>{
+        loaderParam.style.transform='scaleX(100%)';
+        loaderParam.style.transition='all 10s linear';
+    },1000);
+    loaderParam.style.transform='scaleX(0%)';
+
+}
+
+
+weBelieveLi.addEventListener('click', function() {
+    togglePara(weBelieveLiText);
+    animateLoader(section2Loader1);
+});
+weSolveLi.addEventListener('click', function() {
+    togglePara(weSolveLiText);
+    animateLoader(section2Loader2);
+});
+pointOfContactLi.addEventListener('click', function() {
+    togglePara(pointOfContactLiText);
+    animateLoader(section2Loader3);
+});
+flexibleLi.addEventListener('click', function() {
+    togglePara(flexibleLiText);
+    animateLoader(section2Loader4);
+});
+
+
+
+//DOM LOADER SCREEN------------------------------------------------------------
+let loaderPercent = document.getElementById('loader-percent');
+let loaderWhite = document.getElementById('loader-white');
+let loaderScreenDiv = document.getElementById('loader-screen');
+
+var j=0;
+
+let loaderInterval = setInterval(()=>{
+    loaderPercent.innerHTML=j+"%";
+    console.log("j"+j);
+    j++;
+    
+    if(j==101)
+    {
+        clearInterval(loaderInterval);
+        expandLoader();
+        setTimeout(()=>{
+            translateLoader();
+        },1000);
+    }
+},15);
+
+function expandLoader()
+{
+    loaderPercent.style.visibility='hidden';
+    loaderWhite.style.transform='scale(3)';
+    loaderWhite.style.transition='all 1s ease';
+}
+
+function translateLoader()
+{
+
+    loaderWhite.style.transform='translateY(-150vh) scale(3)';
+    loaderWhite.style.transition='all 1.75s ease';
+    loaderWhite.style.transitionDelay='0s';
+    loaderScreenDiv.style.visibility='hidden';
+
+}
